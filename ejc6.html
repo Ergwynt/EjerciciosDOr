@@ -5,7 +5,10 @@
   <title>Notificaciones</title>
   <script>
     function mostrarNotificacion() {
-      document.getElementById('notificacion').innerText = 'Cambio guardado';
+      const notificacion = document.getElementById('notificacion');
+      notificacion.innerText = 'Cambio guardado';
+      notificacion.setAttribute('role', 'status');
+      notificacion.setAttribute('aria-live', 'polite');
     }
   </script>
 </head>
