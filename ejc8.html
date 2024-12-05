@@ -7,22 +7,17 @@
     .submenu {
       display: none;
     }
-    .menu[aria-expanded="true"] .submenu {
+    .menu:hover .submenu {
       display: block;
     }
   </style>
-  <script>
-    function toggleMenu(event) {
-      const menu = event.currentTarget;
-      const isExpanded = menu.getAttribute('aria-expanded') === 'true';
-      menu.setAttribute('aria-expanded', !isExpanded);
-    }
-  </script>
 </head>
 <body>
   <h1>Menú</h1>
-  <div class="menu" aria-expanded="false" onclick="toggleMenu(event)" role="button" tabindex="0">
+  <div class="menu" aria-haspopup="true" aria-expanded="false">
+    <!-- aria-haspopup indica que hay un submenú disponible. -->
     Opciones
+    <!-- aria-expanded cambia dinámicamente para indicar el estado del menú desplegable. -->
     <div class="submenu">
       <p>Opción 1</p>
       <p>Opción 2</p>
@@ -30,3 +25,4 @@
   </div>
 </body>
 </html>
+

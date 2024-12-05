@@ -7,13 +7,13 @@
 </head>
 <body>
   <h1>Formulario de Registro</h1>
-  <form>
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre" aria-required="true">
-    
-    <label for="correo">Correo electrónico</label>
-    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" aria-required="true">
-    
+  <form aria-labelledby="formulario-registro">
+    <!-- La etiqueta <label> enlazada con for permite identificar el proposito del campo. -->
+    <label for="nombre">Nombre:</label>
+    <!-- El atributo required y aria-required indican que el campo es obligatorio -->
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required aria-required="true">
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required aria-required="true">
     <button type="submit">Enviar</button>
   </form>
 </body>

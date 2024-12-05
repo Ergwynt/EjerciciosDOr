@@ -5,15 +5,14 @@
   <title>Notificaciones</title>
   <script>
     function mostrarNotificacion() {
-      const notificacion = document.getElementById('notificacion');
-      notificacion.innerText = 'Cambio guardado';
-      notificacion.setAttribute('role', 'status');
-      notificacion.setAttribute('aria-live', 'polite');
+      // Uso aria-live="polite" para notificar cambios dinámicos a los lectores de pantalla sin interrumpir la interaccion actual.
+      document.getElementById('notificacion').innerText = 'Cambio guardado';
     }
   </script>
 </head>
 <body>
   <button onclick="mostrarNotificacion()">Guardar</button>
-  <div id="notificacion"></div>
+  <!-- aria-live="polite" informa a los lectores de pantalla de los cambios en el contenido dinamico. -->
+  <div id="notificacion" aria-live="polite"></div>
 </body>
 </html>

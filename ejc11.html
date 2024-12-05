@@ -16,7 +16,6 @@
       color: white;
       padding: 10px;
       cursor: pointer;
-      border: none;
     }
   </style>
 </head>
@@ -24,13 +23,14 @@
   <div>
     <h1>Zapatos Deportivos</h1>
     <div>
-      <img src="zapatos.jpg" alt="Zapatos deportivos para correr" width="200" height="150">
+      <!-- Añado alt para describir la imagen. -->
+      <img src="zapatos.jpg" alt="Zapatos deportivos ideales para correr">
       <p>Los mejores zapatos para correr.</p>
-      <p class="precio">Precio: $50</p>
+      <!-- Descripción clara del precio para todos los usuarios. -->
+      <p class="precio" aria-label="Precio del producto: 50 dólares">Precio: $50</p>
     </div>
-    <button class="boton" onclick="alert('Producto añadido al carrito')" aria-label="Añadir Zapatos Deportivos al carrito">
-      Añadir al carrito
-    </button>
+    <!-- Cambio el div por un <button> -->
+    <button onclick="alert('Producto añadido al carrito')">Añadir al carrito</button>
   </div>
 </body>
 </html>

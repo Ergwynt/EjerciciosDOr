@@ -5,15 +5,14 @@
   <title>Notificaciones</title>
   <script>
     function mostrarMensaje() {
-      const mensaje = document.getElementById('mensaje');
-      mensaje.innerText = '¡Nueva notificación!';
-      mensaje.setAttribute('aria-live', 'assertive'); // Notificación accesible
+      // aria-live permite que los cambios sean anunciados por los lectores de pantalla.
+      document.getElementById('mensaje').innerText = '¡Nueva notificación!';
     }
   </script>
 </head>
 <body>
   <h1>Página de Notificaciones</h1>
-  <button onclick="mostrarMensaje()" aria-label="Mostrar notificación">Mostrar Notificación</button>
-  <div id="mensaje" role="status" aria-live="polite"></div>
+  <button onclick="mostrarMensaje()">Mostrar Notificación</button>
+  <div id="mensaje" aria-live="polite"></div>
 </body>
 </html>

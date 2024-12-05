@@ -10,28 +10,18 @@
     .menu:hover .submenu {
       display: block;
     }
-    .menu {
-      position: relative;
-    }
-    .submenu {
-      position: absolute;
-      background-color: #f9f9f9;
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
   </style>
 </head>
 <body>
   <h1>Menú de Opciones</h1>
-  <nav>
-    <div class="menu" aria-haspopup="true" aria-expanded="false">
-      <button aria-controls="submenu" aria-label="Mostrar opciones">Opciones</button>
-      <div id="submenu" class="submenu" role="menu">
-        <p role="menuitem">Opción 1</p>
-        <p role="menuitem">Opción 2</p>
-        <p role="menuitem">Opción 3</p>
-      </div>
+   <!-- Añado aria-haspopup para indicar que contiene un submenu. aria-expanded indica si el submenu está desplegado o no -->
+  <div class="menu" aria-haspopup="true" aria-expanded="false">
+    Opciones
+    <div class="submenu">
+      <p>Opción 1</p>
+      <p>Opción 2</p>
+      <p>Opción 3</p>
     </div>
-  </nav>
+  </div>
 </body>
 </html>
